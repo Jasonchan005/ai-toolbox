@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>免费AI软件推荐 - 可下载的本地AI工具大全</title>
-  <meta name="description" content="精选50+免费可下载的AI软件，涵盖AI绘画、本地大模型、语音识别、视频生成、编程助手等。全部免费开源，本地运行，保护隐私。">
-  <meta name="keywords" content="免费AI软件, 本地AI工具, Stable Diffusion, Ollama, ComfyUI, AI绘画, 开源AI">
+  <title>Free AI Software Downloads - Curated Local AI Tools Directory</title>
+  <meta name="description" content="Discover 40+ free downloadable AI software. AI image generation, local LLMs, speech recognition, video generation, coding assistants - all free, open source, and run locally.">
+  <meta name="keywords" content="free AI software, local AI tools, Stable Diffusion, Ollama, ComfyUI, open source AI, AI downloads">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ai-toolbox-phi.vercel.app/">
-  <meta property="og:title" content="免费AI软件推荐 - 可下载的本地AI工具大全">
-  <meta property="og:description" content="精选50+免费可下载的AI软件，全部本地运行，无需API，保护隐私。">
+  <meta property="og:title" content="Free AI Software Downloads - Curated Local AI Tools Directory">
+  <meta property="og:description" content="40+ free downloadable AI tools. All run locally - no API keys needed, no subscriptions, privacy guaranteed.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ai-toolbox-phi.vercel.app/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -50,10 +50,6 @@
     .fade-in { animation: fadeIn 0.3s ease forwards; }
     .star-filled { color: #f59e0b; fill: #f59e0b; }
     .star-empty { color: #d1d5db; }
-    .platform-badge {
-      display: inline-flex; align-items: center; gap: 3px;
-      padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500;
-    }
     .ad-placeholder { background: #f1f5f9; border: 2px dashed #cbd5e1; }
   </style>
 </head>
@@ -67,15 +63,15 @@
           <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
             <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
           </div>
-          <span class="text-xl font-bold text-gray-900">AI工具箱</span>
+          <span class="text-xl font-bold text-gray-900">AIToolBox</span>
         </a>
         <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-gray-600">
-          <a href="/" class="hover:text-indigo-600 transition">首页</a>
-          <a href="#categories" class="hover:text-indigo-600 transition">分类</a>
-          <a href="#featured" class="hover:text-indigo-600 transition">精选</a>
+          <a href="/" class="hover:text-indigo-600 transition">Home</a>
+          <a href="#categories" class="hover:text-indigo-600 transition">Categories</a>
+          <a href="#featured" class="hover:text-indigo-600 transition">Featured</a>
         </nav>
         <div class="flex items-center gap-2">
-          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">2026年5月更新</span>
+          <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Updated May 2026</span>
         </div>
       </div>
     </div>
@@ -86,19 +82,19 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-sm mb-6">
         <i data-lucide="download" class="w-4 h-4 text-green-400"></i>
-        <span>50+ 免费可下载AI软件 · 全部本地运行 · 无需API</span>
+        <span>40+ Free AI Tools · 100% Local · No API Keys Needed</span>
       </div>
       <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
-        精选<span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">免费AI软件</span><br>下载推荐
+        Free <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">AI Software</span><br>Downloads
       </h1>
       <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
-        只推荐真正免费、可下载安装的AI软件。AI绘画、本地大模型、语音识别、视频生成、编程助手……<br>
-        全部本地运行，无需API Key，保护隐私，永久免费。
+        Curated directory of genuinely free, downloadable AI software. AI image generation, local LLMs,<br>
+        speech recognition, video creation, coding assistants — all run locally on your machine.
       </p>
       <!-- Search -->
       <div class="max-w-xl mx-auto relative">
         <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
-        <input id="searchInput" type="text" placeholder="搜索AI软件... 例如：AI绘画、Ollama、视频生成"
+        <input id="searchInput" type="text" placeholder="Search AI tools... e.g., image generation, Ollama, video"
           class="search-glow w-full pl-12 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur border border-white/20 text-white placeholder-gray-400 text-lg focus:outline-none focus:bg-white/15 transition">
       </div>
     </div>
@@ -114,7 +110,7 @@
   <!-- Ad Banner -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
     <div class="ad-placeholder rounded-xl h-20 flex items-center justify-center text-gray-400 text-sm">
-      广告位
+      Advertisement
     </div>
   </div>
 
@@ -122,7 +118,7 @@
   <section id="featured" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
     <div class="flex items-center gap-3 mb-6">
       <i data-lucide="star" class="w-6 h-6 text-amber-500"></i>
-      <h2 class="text-2xl font-bold">编辑精选</h2>
+      <h2 class="text-2xl font-bold">Editor's Picks</h2>
     </div>
     <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <!-- Populated by JS -->
@@ -132,7 +128,7 @@
   <!-- All Tools -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16">
     <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-bold">全部AI软件</h2>
+      <h2 class="text-2xl font-bold">All AI Tools</h2>
       <span id="toolCount" class="text-sm text-gray-500"></span>
     </div>
     <div id="allToolsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -140,8 +136,8 @@
     </div>
     <div id="noResults" class="hidden text-center py-16">
       <i data-lucide="search-x" class="w-12 h-12 text-gray-300 mx-auto mb-4"></i>
-      <p class="text-gray-500 text-lg">没有找到匹配的AI软件。</p>
-      <button onclick="clearSearch()" class="mt-2 text-indigo-600 hover:underline">清除搜索</button>
+      <p class="text-gray-500 text-lg">No AI tools found matching your search.</p>
+      <button onclick="clearSearch()" class="mt-2 text-indigo-600 hover:underline">Clear search</button>
     </div>
   </section>
 
@@ -154,27 +150,27 @@
             <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
               <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
             </div>
-            <span class="text-xl font-bold text-white">AI工具箱</span>
+            <span class="text-xl font-bold text-white">AIToolBox</span>
           </div>
-          <p class="text-sm leading-relaxed">精选免费可下载AI软件推荐平台。所有软件均为免费/开源，可在本地运行，无需API Key。</p>
+          <p class="text-sm leading-relaxed">Curated directory of free, downloadable AI software. All tools are free/open source, run locally on your machine. No API keys, no subscriptions.</p>
         </div>
         <div>
-          <h3 class="text-white font-semibold mb-3">热门分类</h3>
+          <h3 class="text-white font-semibold mb-3">Popular Categories</h3>
           <ul class="space-y-2 text-sm">
-            <li><a href="#image" class="hover:text-white transition">AI绘画生成</a></li>
-            <li><a href="#llm" class="hover:text-white transition">本地大模型对话</a></li>
-            <li><a href="#video" class="hover:text-white transition">AI视频生成</a></li>
-            <li><a href="#code" class="hover:text-white transition">AI编程助手</a></li>
+            <li><a href="#image" class="hover:text-white transition">AI Image Generation</a></li>
+            <li><a href="#llm" class="hover:text-white transition">Local LLMs</a></li>
+            <li><a href="#video" class="hover:text-white transition">AI Video</a></li>
+            <li><a href="#code" class="hover:text-white transition">AI Coding</a></li>
           </ul>
         </div>
         <div>
-          <h3 class="text-white font-semibold mb-3">关于</h3>
-          <p class="text-sm leading-relaxed mb-3">本站所有推荐均为免费/开源软件，仅提供官方下载链接，不托管任何安装包。所有软件版权归原作者所有。</p>
-          <p class="text-xs">最后更新：2026年5月</p>
+          <h3 class="text-white font-semibold mb-3">About</h3>
+          <p class="text-sm leading-relaxed mb-3">We recommend only free and open-source AI software. All download links point to official sources (GitHub or official websites). We do not host any software ourselves.</p>
+          <p class="text-xs">Last updated: May 2026</p>
         </div>
       </div>
       <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-        <p>&copy; 2026 AI工具箱. All rights reserved.</p>
+        <p>&copy; 2026 AIToolBox. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -190,13 +186,6 @@
       teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700', dot: 'bg-teal-500' },
       indigo: { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-700', dot: 'bg-indigo-500' },
       orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', dot: 'bg-orange-500' }
-    };
-
-    const platformIcons = {
-      'Windows': { icon: 'monitor', label: 'Windows' },
-      'macOS': { icon: 'apple', label: 'macOS' },
-      'Linux': { icon: 'terminal', label: 'Linux' },
-      'iOS': { icon: 'smartphone', label: 'iOS' }
     };
 
     function renderStars(rating) {
@@ -216,8 +205,8 @@
     function getPricingClass(pricing) {
       if (!pricing) return 'bg-gray-100 text-gray-700';
       const p = pricing.toLowerCase();
-      if (p.includes('开源') || p.includes('open source')) return 'bg-purple-100 text-purple-700';
-      if (p === '免费' || p === 'free') return 'bg-green-100 text-green-700';
+      if (p.includes('open source')) return 'bg-purple-100 text-purple-700';
+      if (p === 'free') return 'bg-green-100 text-green-700';
       return 'bg-blue-100 text-blue-700';
     }
 
@@ -237,7 +226,7 @@
               <div class="min-w-0">
                 <h3 class="font-semibold text-gray-900 flex items-center gap-1.5 text-base">
                   ${tool.name}
-                  ${tool.featured ? '<span class="text-amber-500 text-xs font-bold">★精选</span>' : ''}
+                  ${tool.featured ? '<span class="text-amber-500 text-xs font-bold">★PICK</span>' : ''}
                 </h3>
                 <div class="flex items-center gap-2 mt-0.5">
                   <span class="text-xs ${colors.text} font-medium">${cat.name}</span>
@@ -251,10 +240,7 @@
 
           <!-- Platform badges -->
           <div class="flex flex-wrap gap-1.5 mb-3">
-            ${tool.platforms.map(p => {
-              const pInfo = platformIcons[p] || { icon: 'monitor', label: p };
-              return `<span class="platform-badge bg-gray-100 text-gray-600">${p}</span>`;
-            }).join('')}
+            ${tool.platforms.map(p => `<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-600">${p}</span>`).join('')}
           </div>
 
           <!-- Tags -->
@@ -270,7 +256,7 @@
             <a href="${tool.downloadUrl}" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center gap-1.5 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition">
               <i data-lucide="download" class="w-4 h-4"></i>
-              <span>下载</span>
+              <span>Download</span>
             </a>
           </div>
         </div>
@@ -286,7 +272,7 @@
       TOOLS.forEach(t => { counts[t.category] = (counts[t.category] || 0) + 1; });
 
       let html = `<button onclick="filterCategory('all')" class="category-chip active px-4 py-2 rounded-full text-sm font-medium bg-gray-900 text-white" data-cat="all">
-        全部 <span class="ml-1 opacity-70">(${TOOLS.length})</span>
+        All <span class="ml-1 opacity-70">(${TOOLS.length})</span>
       </button>`;
 
       Object.entries(CATEGORIES).forEach(([key, cat]) => {
@@ -338,7 +324,7 @@
 
       featuredContainer.innerHTML = '';
       allContainer.innerHTML = '';
-      countEl.textContent = `${filtered.length} 个软件`;
+      countEl.textContent = `${filtered.length} tools`;
 
       if (filtered.length === 0) {
         noResults.classList.remove('hidden');
@@ -356,13 +342,11 @@
       const allToRender = activeCategory === 'all' && !search ? rest : filtered;
       allToRender.forEach(t => allContainer.appendChild(createToolCard(t, t.featured)));
 
-      // Hide featured section if filtering
       document.getElementById('featured').classList.toggle('hidden', activeCategory !== 'all' || !!search);
 
       lucide.createIcons();
     }
 
-    // Init
     document.addEventListener('DOMContentLoaded', () => {
       renderCategories();
       renderTools();
