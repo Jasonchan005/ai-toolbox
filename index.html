@@ -125,14 +125,14 @@
     </div>
   </section>
 
-  <!-- All Tools -->
+  <!-- Category Sections -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16">
     <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-bold">All AI Tools</h2>
+      <h2 class="text-2xl font-bold">All Categories</h2>
       <span id="toolCount" class="text-sm text-gray-500"></span>
     </div>
-    <div id="allToolsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-      <!-- Populated by JS -->
+    <div id="categorySections">
+      <!-- Populated by JS with grouped sections -->
     </div>
     <div id="noResults" class="hidden text-center py-16">
       <i data-lucide="search-x" class="w-12 h-12 text-gray-300 mx-auto mb-4"></i>
@@ -318,31 +318,65 @@
       }
 
       const featuredContainer = document.getElementById('featuredGrid');
-      const allContainer = document.getElementById('allToolsGrid');
+      const categorySections = document.getElementById('categorySections');
       const noResults = document.getElementById('noResults');
       const countEl = document.getElementById('toolCount');
 
       featuredContainer.innerHTML = '';
-      allContainer.innerHTML = '';
+      categorySections.innerHTML = '';
       countEl.textContent = `${filtered.length} tools`;
 
       if (filtered.length === 0) {
         noResults.classList.remove('hidden');
+        document.getElementById('featured').classList.add('hidden');
         return;
       }
       noResults.classList.add('hidden');
 
-      const featured = filtered.filter(t => t.featured);
-      const rest = filtered.filter(t => !t.featured);
-
+      // Featured section (only when showing all, no search)
       if (activeCategory === 'all' && !search) {
+        const featured = filtered.filter(t => t.featured);
         featured.forEach(t => featuredContainer.appendChild(createToolCard(t, true)));
+        document.getElementById('featured').classList.remove('hidden');
+      } else {
+        document.getElementById('featured').classList.add('hidden');
       }
 
-      const allToRender = activeCategory === 'all' && !search ? rest : filtered;
-      allToRender.forEach(t => allContainer.appendChild(createToolCard(t, t.featured)));
+      // Group by category
+      const grouped = {};
+      const order = ['image', 'llm', 'audio', 'video', 'code', 'photo', 'ocr', 'allinone'];
+      
+      filtered.forEach(t => {
+        if (!grouped[t.category]) grouped[t.category] = [];
+        grouped[t.category].push(t);
+      });
 
-      document.getElementById('featured').classList.toggle('hidden', activeCategory !== 'all' || !!search);
+      order.forEach(catKey => {
+        if (!grouped[catKey]) return;
+        const cat = CATEGORIES[catKey];
+        const colors = colorMap[cat.color];
+        const tools = grouped[catKey];
+
+        const section = document.createElement('div');
+        section.className = 'mb-10';
+        section.innerHTML = `
+          <div class="flex items-center gap-3 mb-4 pb-3 border-b border-gray-200">
+            <div class="w-8 h-8 ${colors.bg} rounded-lg flex items-center justify-center">
+              <i data-lucide="${cat.icon}" class="w-4 h-4 ${colors.text}"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">${cat.name}</h3>
+            <span class="text-sm text-gray-400">(${tools.length})</span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+        `;
+        
+        const grid = section.querySelector('.grid');
+        tools.forEach(t => {
+          grid.appendChild(createToolCard(t, t.featured));
+        });
+        
+        categorySections.appendChild(section);
+      });
 
       lucide.createIcons();
     }
