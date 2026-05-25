@@ -17,7 +17,7 @@ const TOOLS = [
     name: "ComfyUI",
     category: "image",
     description: "Node-based workflow AI image generator. Build complex image generation pipelines visually. More efficient than WebUI for batch processing and advanced workflows.",
-    downloadUrl: "https://github.com/comfyanonymous/ComfyUI",
+    downloadUrl: "https://www.comfy.org/",
     pricing: "Free (Open Source)",
     platforms: ["Windows", "macOS", "Linux"],
     rating: 4.7,
@@ -394,6 +394,18 @@ const TOOLS = [
     tags: ["Background Removal", "Batch", "CLI"],
     featured: false
   },
+  {
+    id: "upscayl",
+    name: "Upscayl",
+    category: "photo",
+    description: "Free and open-source AI image upscaler. Upscale and enhance low-resolution images using AI models. Works offline with GPU acceleration. One of the most popular free upscaling tools.",
+    downloadUrl: "https://upscayl.org/",
+    pricing: "Free (Open Source)",
+    platforms: ["Windows", "macOS", "Linux"],
+    rating: 4.5,
+    tags: ["Image Upscaling", "Enhancement", "Open Source"],
+    featured: false
+  },
 
   // ===== OCR & Translation =====
   {
@@ -452,7 +464,7 @@ const TOOLS = [
     category: "allinone",
     description: "One-click AI app installer and browser. Hundreds of AI apps built-in (SD, ComfyUI, Ollama, etc.). Click to install and run. Perfect AI entry point for beginners.",
     downloadUrl: "https://pinokio.computer",
-    pricing: "Free",
+    pricing: "Free (Open Source)",
     platforms: ["Windows", "macOS", "Linux"],
     rating: 4.6,
     tags: ["All-in-One", "One-Click", "App Manager"],
@@ -492,6 +504,18 @@ const TOOLS = [
     platforms: ["Windows", "macOS", "Linux"],
     rating: 4.2,
     tags: ["All-in-One", "Simple", "AI Art"],
+    featured: false
+  },
+  {
+    id: "anythingllm",
+    name: "AnythingLLM",
+    category: "llm",
+    description: "Open-source RAG (Retrieval-Augmented Generation) desktop app. Chat with your documents - PDFs, Word, Excel, code files. Connect to local models (Ollama/LM Studio) or cloud APIs. Built-in workspace management.",
+    downloadUrl: "https://anythingllm.com/",
+    pricing: "Free (Open Source)",
+    platforms: ["Windows", "macOS", "Linux"],
+    rating: 4.5,
+    tags: ["RAG", "Document Chat", "Knowledge Base"],
     featured: false
   }
 ];
