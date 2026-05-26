@@ -294,21 +294,12 @@ const PROMPTS = [
     featured: true
   },
   {
-    id: "fitness-coach",
-    title: "Fitness & Nutrition Coach",
-    category: "roleplay",
-    description: "Get personalized workout plans, nutrition advice, and fitness motivation.",
-    prompt: "Act as my personal fitness coach. My profile:\n- Age: [age]\n- Gender: [gender]\n- Fitness level: [beginner/intermediate/advanced]\n- Goals: [lose weight/build muscle/improve endurance/flexibility]\n- Available equipment: [gym/home/bodyweight only]\n- Days per week: [number]\n- Time per session: [minutes]\n- Dietary preferences: [any restrictions]\n- Health conditions/injuries: [list]\n\nPlease create:\n1. A weekly workout schedule\n2. 3 different workout routines I can rotate\n3. A simple nutrition guide\n4. Warm-up and cool-down routines\n5. Progress tracking metrics\n6. Common mistakes to avoid\n\nMake it realistic and sustainable for a busy person.",
-    tags: ["fitness", "health", "workout"],
-    featured: false
-  },
-  {
     id: "therapy-journal",
     title: "Journaling & Reflection Guide",
     category: "roleplay",
-    description: "Guided journaling prompts for self-reflection, mindfulness, and personal growth.",
-    prompt: "Act as a guided journaling coach. I want to reflect on [topic - e.g., a challenging situation, a goal I'm working toward, a relationship].\n\nGuide me through:\n\n1. **Check-in**: How am I feeling right now? (1-10 scale)\n2. **The situation**: What happened? (describe factually)\n3. **My reaction**: How did I respond emotionally and practically?\n4. **Deeper layer**: What's really going on beneath the surface?\n5. **Reframing**: What's another way to look at this?\n6. **Gratitude**: What's one thing I can appreciate about this?\n7. **Action**: What's one small step I can take today?\n8. **Closing**: What do I want to remember about this?\n\nAsk me one question at a time and respond to my answers before moving to the next.",
-    tags: ["mindfulness", "reflection", "mental health"],
+    description: "Guided journaling prompts for self-reflection and personal growth.",
+    prompt: "Act as a guided journaling coach. I want to reflect on [topic - e.g., a challenging situation, a goal I'm working toward, a relationship].\n\nGuide me through:\n\n1. **Check-in**: How am I feeling right now? (1-10 scale)\n2. **The situation**: What happened? (describe factually)\n3. **My reaction**: How did I respond?\n4. **Deeper layer**: What's really going on beneath the surface?\n5. **Reframing**: What's another way to look at this?\n6. **Gratitude**: What's one thing I can appreciate about this?\n7. **Action**: What's one small step I can take today?\n8. **Closing**: What do I want to remember about this?\n\nAsk me one question at a time and respond to my answers before moving to the next.",
+    tags: ["mindfulness", "reflection", "wellness"],
     featured: false
   },
   // ===== Additional Prompts =====
@@ -373,15 +364,6 @@ const PROMPTS = [
     description: "Get plain-English explanations of legal contract clauses and terms.",
     prompt: "Explain the following contract clause in plain English:\n\n```\n[paste the clause here]\n```\n\nPlease:\n1. **Simple translation**: what this clause means in plain English\n2. **Key obligations**: what each party must do\n3. **Risks**: what to watch out for\n4. **Negotiation points**: what could be changed\n5. **Red flags**: language that should raise concern\n6. **Industry standard**: is this clause typical or unusual?\n\nNote: I understand this is not legal advice. I will consult a lawyer for final review.",
     tags: ["legal", "contract", "analysis"],
-    featured: false
-  },
-  {
-    id: "meal-planner",
-    title: "Weekly Meal Planner",
-    category: "roleplay",
-    description: "Generate personalized weekly meal plans based on dietary preferences and goals.",
-    prompt: "Create a [number]-day meal plan for someone who:\n- Dietary preference: [omnivore/vegetarian/vegan/keto/etc.]\n- Calories target: [calories] per day\n- Allergies: [list any]\n- Cooking skill: [beginner/intermediate/advanced]\n- Time per meal: [minutes]\n- Budget: [low/medium/high]\n\nFor each day, provide:\n- Breakfast\n- Lunch\n- Dinner\n- 1 snack\n\nAlso include:\n- A grocery shopping list organized by category\n- 3 recipes that are quick and easy\n- Prep-ahead tips to save time during the week",
-    tags: ["meal planning", "nutrition", "cooking"],
     featured: false
   },
   {
