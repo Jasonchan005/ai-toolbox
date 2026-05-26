@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best ChatGPT Prompts 2026 - Free AI Prompt Library for Writing, Coding & More</title>
+  <meta name="description" content="Free curated library of 50+ high-quality ChatGPT prompts. Writing, coding, business, learning, and creative prompts. Copy and paste - instant use.">
+  <meta name="keywords" content="ChatGPT prompts, AI prompts, prompt library, free prompts, ChatGPT templates, AI writing prompts">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ai-toolbox-rouge.vercel.app/prompts">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-503ZSLGF0W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-503ZSLGF0W');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="prompts-data.js"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .prompt-card { transition: all 0.2s ease; }
+    .prompt-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,0.08); }
+    .category-chip { transition: all 0.15s ease; }
+    .category-chip:hover { transform: scale(1.03); }
+    .hero-gradient { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
+    .search-glow:focus { box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.3s ease forwards; }
+    .prompt-text { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; font-size: 13px; line-height: 1.7; color: #334155; white-space: pre-wrap; font-family: 'SF Mono', 'Fira Code', monospace; }
+    .copied-toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #1e293b; color: white; padding: 12px 24px; border-radius: 12px; font-size: 14px; font-weight: 500; z-index: 100; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
+    .copied-toast.show { opacity: 1; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Toast -->
+  <div id="toast" class="copied-toast">✓ Copied to clipboard!</div>
+
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+          </div>
+          <span class="text-xl font-bold text-gray-900">AI Prompts</span>
+        </a>
+        <nav class="hidden sm:flex items-center gap-6 text-sm font-medium text-gray-600">
+          <a href="https://ai-toolbox-rouge.vercel.app/" class="hover:text-indigo-600 transition">AI Tools</a>
+          <a href="#categories" class="hover:text-indigo-600 transition">Categories</a>
+        </nav>
+        <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">Updated May 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-gradient text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1.5 rounded-full text-sm mb-6">
+        <i data-lucide="copy" class="w-4 h-4 text-green-400"></i>
+        <span>50+ Free Prompts · Copy & Paste · Instant Use</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 leading-tight">
+        Best <span class="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">ChatGPT Prompts</span><br>Library
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10">
+        Free curated prompts for writing, coding, business, learning, and creativity.<br>
+        Copy any prompt, paste into ChatGPT/Claude/Gemini, and get better results instantly.
+      </p>
+      <div class="max-w-xl mx-auto relative">
+        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+        <input id="searchInput" type="text" placeholder="Search prompts... e.g., email, code, business plan"
+          class="search-glow w-full pl-12 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur border border-white/20 text-white placeholder-gray-400 text-lg focus:outline-none focus:bg-white/15 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">
+    <div id="categoryFilter" class="flex flex-wrap gap-2 justify-center bg-white rounded-2xl shadow-lg p-4">
+    </div>
+  </section>
+
+  <!-- Ad Banner -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+    <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-xl h-20 flex items-center justify-center text-gray-400 text-sm">
+      Advertisement
+    </div>
+  </div>
+
+  <!-- Featured -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+    <div class="flex items-center gap-3 mb-6">
+      <i data-lucide="star" class="w-6 h-6 text-amber-500"></i>
+      <h2 class="text-2xl font-bold">Editor's Picks</h2>
+    </div>
+    <div id="featuredGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    </div>
+  </section>
+
+  <!-- All Prompts -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">All Prompts</h2>
+      <span id="promptCount" class="text-sm text-gray-500"></span>
+    </div>
+    <div id="categorySections"></div>
+    <div id="noResults" class="hidden text-center py-16">
+      <i data-lucide="search-x" class="w-12 h-12 text-gray-300 mx-auto mb-4"></i>
+      <p class="text-gray-500 text-lg">No prompts found matching your search.</p>
+      <button onclick="clearSearch()" class="mt-2 text-indigo-600 hover:underline">Clear search</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="text-xl font-bold text-white">AI Prompts</span>
+          </div>
+          <p class="text-sm leading-relaxed">Free curated library of high-quality prompts for ChatGPT, Claude, Gemini, and more. Copy, paste, and get better AI results.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">Categories</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#writing" class="hover:text-white transition">Writing & Content</a></li>
+            <li><a href="#coding" class="hover:text-white transition">Coding & Development</a></li>
+            <li><a href="#business" class="hover:text-white transition">Business & Marketing</a></li>
+            <li><a href="#learning" class="hover:text-white transition">Learning & Education</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold mb-3">About</h3>
+          <p class="text-sm leading-relaxed mb-3">All prompts are original creations. Free to use for any purpose. No attribution required.</p>
+          <p class="text-xs">Last updated: May 2026</p>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+        <p>&copy; 2026 AI Prompts. Part of <a href="https://ai-toolbox-rouge.vercel.app/" class="hover:text-white underline">AIToolBox</a>.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const colorMap = {
+      blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700' },
+      purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' },
+      pink: { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-700' },
+      green: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700' },
+      amber: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700' },
+      red: { bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700' },
+      teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700' },
+      indigo: { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-700' },
+      orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700' }
+    };
+
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2000);
+    }
+
+    function createPromptCard(prompt, isFeatured) {
+      const cat = PROMPT_CATEGORIES[prompt.category];
+      const colors = colorMap[cat.color];
+      const card = document.createElement('div');
+      card.className = `prompt-card bg-white rounded-xl border border-gray-200 overflow-hidden fade-in ${isFeatured ? 'ring-2 ring-amber-200' : ''}`;
+
+      card.innerHTML = `
+        <div class="p-5">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 ${colors.bg} rounded-lg flex items-center justify-center shrink-0">
+              <i data-lucide="${cat.icon}" class="w-5 h-5 ${colors.text}"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900 flex items-center gap-1.5">
+                ${prompt.title}
+                ${prompt.featured ? '<span class="text-amber-500 text-xs font-bold">★PICK</span>' : ''}
+              </h3>
+              <span class="text-xs ${colors.text} font-medium">${cat.name}</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mb-3 leading-relaxed">${prompt.description}</p>
+          <div class="prompt-text mb-3" id="promptText-${prompt.id}">${prompt.prompt}</div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            ${prompt.tags.slice(0, 3).map(t => `<span class="text-xs px-2 py-0.5 rounded-full bg-gray-50 text-gray-500 border border-gray-100">${t}</span>`).join('')}
+          </div>
+          <button onclick="copyPrompt('${prompt.id}')" class="w-full py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-lg transition flex items-center justify-center gap-2">
+            <i data-lucide="copy" class="w-4 h-4"></i>
+            <span>Copy Prompt</span>
+          </button>
+        </div>
+      `;
+      return card;
+    }
+
+    function copyPrompt(id) {
+      const el = document.getElementById('promptText-' + id);
+      if (!el) return;
+      navigator.clipboard.writeText(el.textContent).then(() => showToast()).catch(() => {
+        // Fallback
+        const textarea = document.createElement('textarea');
+        textarea.value = el.textContent;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast();
+      });
+    }
+
+    let activeCategory = 'all';
+
+    function renderCategories() {
+      const container = document.getElementById('categoryFilter');
+      const counts = {};
+      PROMPTS.forEach(p => { counts[p.category] = (counts[p.category] || 0) + 1; });
+      let html = `<button onclick="filterCategory('all')" class="category-chip active px-4 py-2 rounded-full text-sm font-medium bg-gray-900 text-white" data-cat="all">All <span class="ml-1 opacity-70">(${PROMPTS.length})</span></button>`;
+      Object.entries(PROMPT_CATEGORIES).forEach(([key, cat]) => {
+        const colors = colorMap[cat.color];
+        html += `<button onclick="filterCategory('${key}')" class="category-chip px-4 py-2 rounded-full text-sm font-medium ${colors.bg} ${colors.text} border ${colors.border}" data-cat="${key}">${cat.name} <span class="opacity-70">(${counts[key] || 0})</span></button>`;
+      });
+      container.innerHTML = html;
+    }
+
+    function filterCategory(cat) {
+      activeCategory = cat;
+      document.querySelectorAll('.category-chip').forEach(el => {
+        el.classList.remove('active', 'bg-gray-900', 'text-white');
+        if (el.dataset.cat === cat) el.classList.add('active', 'bg-gray-900', 'text-white');
+      });
+      renderPrompts();
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      renderPrompts();
+    }
+
+    function renderPrompts() {
+      const search = document.getElementById('searchInput').value.toLowerCase().trim();
+      let filtered = PROMPTS;
+      if (activeCategory !== 'all') filtered = filtered.filter(p => p.category === activeCategory);
+      if (search) {
+        filtered = filtered.filter(p =>
+          p.title.toLowerCase().includes(search) ||
+          p.description.toLowerCase().includes(search) ||
+          p.tags.some(t => t.includes(search)) ||
+          PROMPT_CATEGORIES[p.category].name.toLowerCase().includes(search)
+        );
+      }
+
+      const featuredGrid = document.getElementById('featuredGrid');
+      const sections = document.getElementById('categorySections');
+      const noResults = document.getElementById('noResults');
+      document.getElementById('promptCount').textContent = `${filtered.length} prompts`;
+
+      featuredGrid.innerHTML = '';
+      sections.innerHTML = '';
+
+      if (filtered.length === 0) {
+        noResults.classList.remove('hidden');
+        document.getElementById('featured').classList.add('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+
+      // Featured
+      if (activeCategory === 'all' && !search) {
+        filtered.filter(p => p.featured).forEach(p => featuredGrid.appendChild(createPromptCard(p, true)));
+        document.getElementById('featured').classList.remove('hidden');
+      } else {
+        document.getElementById('featured').classList.add('hidden');
+      }
+
+      // Group by category
+      const grouped = {};
+      const order = ['writing', 'coding', 'learning', 'business', 'communication', 'analysis', 'creative', 'roleplay'];
+      filtered.forEach(p => { if (!grouped[p.category]) grouped[p.category] = []; grouped[p.category].push(p); });
+
+      order.forEach(catKey => {
+        if (!grouped[catKey]) return;
+        const cat = PROMPT_CATEGORIES[catKey];
+        const colors = colorMap[cat.color];
+        const sec = document.createElement('div');
+        sec.className = 'mb-10';
+        sec.innerHTML = `<div class="flex items-center gap-3 mb-4 pb-3 border-b border-gray-200"><div class="w-8 h-8 ${colors.bg} rounded-lg flex items-center justify-center"><i data-lucide="${cat.icon}" class="w-4 h-4 ${colors.text}"></i></div><h3 class="text-xl font-bold text-gray-900">${cat.name}</h3><span class="text-sm text-gray-400">(${grouped[catKey].length})</span></div><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>`;
+        const grid = sec.querySelector('.grid');
+        grouped[catKey].forEach(p => grid.appendChild(createPromptCard(p, false)));
+        sections.appendChild(sec);
+      });
+
+      lucide.createIcons();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategories();
+      renderPrompts();
+      lucide.createIcons();
+      document.getElementById('searchInput').addEventListener('input', renderPrompts);
+    });
+  </script>
+</body>
+</html>
