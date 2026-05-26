@@ -74,11 +74,18 @@
         Free curated prompts for writing, coding, business, learning, and creativity.<br>
         Copy any prompt, paste into ChatGPT/Claude/Gemini, and get better results instantly.
       </p>
-      <div class="max-w-xl mx-auto relative">
-        <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
-        <input id="searchInput" type="text" placeholder="Search prompts... e.g., email, code, business plan"
-          class="search-glow w-full pl-12 pr-4 py-4 rounded-2xl bg-white/10 backdrop-blur border border-white/20 text-white placeholder-gray-400 text-lg focus:outline-none focus:bg-white/15 transition">
+      <div class="max-w-xl mx-auto">
+        <a href="https://ai-toolbox-rouge.vercel.app/" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/20 text-white rounded-2xl text-lg transition">
+          <i data-lucide="grid" class="w-5 h-5"></i>
+          <span>Browse 42 Free AI Software →</span>
+        </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10">
+    <div id="categoryFilter" class="flex flex-wrap gap-2 justify-center bg-white rounded-2xl shadow-lg p-4">
     </div>
   </section>
 
@@ -112,11 +119,6 @@
       <span id="promptCount" class="text-sm text-gray-500"></span>
     </div>
     <div id="categorySections"></div>
-    <div id="noResults" class="hidden text-center py-16">
-      <i data-lucide="search-x" class="w-12 h-12 text-gray-300 mx-auto mb-4"></i>
-      <p class="text-gray-500 text-lg">No prompts found matching your search.</p>
-      <button onclick="clearSearch()" class="mt-2 text-indigo-600 hover:underline">Clear search</button>
-    </div>
   </section>
 
   <!-- Footer -->
@@ -244,41 +246,19 @@
       renderPrompts();
     }
 
-    function clearSearch() {
-      document.getElementById('searchInput').value = '';
-      renderPrompts();
-    }
-
     function renderPrompts() {
-      const search = document.getElementById('searchInput').value.toLowerCase().trim();
       let filtered = PROMPTS;
       if (activeCategory !== 'all') filtered = filtered.filter(p => p.category === activeCategory);
-      if (search) {
-        filtered = filtered.filter(p =>
-          p.title.toLowerCase().includes(search) ||
-          p.description.toLowerCase().includes(search) ||
-          p.tags.some(t => t.includes(search)) ||
-          PROMPT_CATEGORIES[p.category].name.toLowerCase().includes(search)
-        );
-      }
 
       const featuredGrid = document.getElementById('featuredGrid');
       const sections = document.getElementById('categorySections');
-      const noResults = document.getElementById('noResults');
       document.getElementById('promptCount').textContent = `${filtered.length} prompts`;
 
       featuredGrid.innerHTML = '';
       sections.innerHTML = '';
 
-      if (filtered.length === 0) {
-        noResults.classList.remove('hidden');
-        document.getElementById('featured').classList.add('hidden');
-        return;
-      }
-      noResults.classList.add('hidden');
-
       // Featured
-      if (activeCategory === 'all' && !search) {
+      if (activeCategory === 'all') {
         filtered.filter(p => p.featured).forEach(p => featuredGrid.appendChild(createPromptCard(p, true)));
         document.getElementById('featured').classList.remove('hidden');
       } else {
@@ -309,7 +289,6 @@
       renderCategories();
       renderPrompts();
       lucide.createIcons();
-      document.getElementById('searchInput').addEventListener('input', renderPrompts);
     });
   </script>
 </body>
