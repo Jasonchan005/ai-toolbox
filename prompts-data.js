@@ -310,6 +310,124 @@ const PROMPTS = [
     prompt: "Act as a guided journaling coach. I want to reflect on [topic - e.g., a challenging situation, a goal I'm working toward, a relationship].\n\nGuide me through:\n\n1. **Check-in**: How am I feeling right now? (1-10 scale)\n2. **The situation**: What happened? (describe factually)\n3. **My reaction**: How did I respond emotionally and practically?\n4. **Deeper layer**: What's really going on beneath the surface?\n5. **Reframing**: What's another way to look at this?\n6. **Gratitude**: What's one thing I can appreciate about this?\n7. **Action**: What's one small step I can take today?\n8. **Closing**: What do I want to remember about this?\n\nAsk me one question at a time and respond to my answers before moving to the next.",
     tags: ["mindfulness", "reflection", "mental health"],
     featured: false
+  },
+  // ===== Additional Prompts =====
+  {
+    id: "resume-review",
+    title: "Resume & CV Optimizer",
+    category: "roleplay",
+    description: "Get your resume reviewed and optimized for job applications and ATS systems.",
+    prompt: "Review my resume and suggest improvements. My target role: [job title]. Industry: [industry].\n\nResume content:\n```\n[paste your resume here]\n```\n\nPlease:\n1. Overall assessment (strengths/weaknesses)\n2. ATS compatibility check\n3. Bullet point improvements (make them more impactful)\n4. Keywords I'm missing\n5. Suggested summary/objective rewrite\n6. Format and layout suggestions\n\nBe specific. Give me exact rewrites, not general advice.",
+    tags: ["resume", "job search", "career"],
+    featured: false
+  },
+  {
+    id: "microsoft-excel",
+    title: "Excel Formula Expert",
+    category: "learning",
+    description: "Get help with Excel formulas, functions, and spreadsheet automation.",
+    prompt: "I need help with an Excel formula. What I'm trying to do: [describe your goal].\n\nMy data looks like:\n- Column A: [description]\n- Column B: [description]\n- Column C: [description]\n\nDesired output: [what result you want]\n\nWhat I've tried: [any formula you've attempted]\n\nPlease provide:\n1. The formula I should use\n2. A step-by-step explanation of how it works\n3. Alternative approaches if applicable\n4. Common errors to watch out for",
+    tags: ["Excel", "spreadsheet", "formula"],
+    featured: false
+  },
+  {
+    id: "cover-letter",
+    title: "Cover Letter Writer",
+    category: "communication",
+    description: "Write tailored cover letters for job applications that stand out.",
+    prompt: "Write a cover letter for a [job title] position at [company name].\n\nMy background:\n- [key experience 1]\n- [key experience 2]\n- [key skill]\n\nCompany info: [what you know about the company]\n\nRequirements:\n- Address the hiring manager directly\n- Connect my experience to their needs\n- Show enthusiasm without being generic\n- Keep it to 3-4 short paragraphs\n- Include a call to action\n\nTone: professional but personable.",
+    tags: ["cover letter", "job application", "career"],
+    featured: false
+  },
+  {
+    id: "interview-questions",
+    title: "Interview Question Generator",
+    category: "business",
+    description: "Generate relevant interview questions for any role or industry.",
+    prompt: "Generate [number] interview questions for a [job title] position at a [type of company] company.\n\nJob description:\n[paste job description]\n\nCategorize the questions:\n1. **Behavioral** (tell me about a time...)\n2. **Technical/Skills** (how would you...)\n3. **Situational** (what would you do if...)\n4. **Culture fit** (why do you want to work here?)\n\nFor each question, provide:\n- What to look for in a good answer\n- Red flags to watch out for\n- Follow-up questions",
+    tags: ["hiring", "interview", "HR"],
+    featured: false
+  },
+  {
+    id: "seo-content",
+    title: "SEO Content Brief Writer",
+    category: "writing",
+    description: "Create detailed content briefs for SEO-optimized articles and blog posts.",
+    prompt: "Create a content brief for an article targeting the keyword: [target keyword]. Target audience: [audience description].\n\nInclude:\n1. **Working title**: 3 options\n2. **Meta description**: max 160 chars, include keyword\n3. **Target keywords**: primary + 3-5 secondary keywords\n4. **Search intent**: informational/commercial/transactional\n5. **Outline**: H2 and H3 headings with brief descriptions\n6. **Key points to cover**: 5-7 bullet points\n7. **FAQ ideas**: 3-5 questions to answer\n8. **Internal linking suggestions**: related topics\n9. **Word count recommendation**: based on top 10 search results\n10. **Tone and style guidelines",
+    tags: ["SEO", "content strategy", "keyword research"],
+    featured: false
+  },
+  {
+    id: "python-script",
+    title: "Python Script Generator",
+    category: "coding",
+    description: "Generate Python scripts for automation, data processing, and web scraping.",
+    prompt: "Write a Python script to [describe the task].\n\nRequirements:\n- Input: [describe input format]\n- Output: [describe expected output]\n- Libraries allowed: [any preferences, or 'standard library only']\n\nPlease include:\n1. The complete script with imports\n2. Clear comments explaining each section\n3. Error handling for common edge cases\n4. A usage example at the bottom\n5. Requirements.txt or dependency list\n\nOptimize for readability first, performance second.",
+    tags: ["Python", "automation", "script"],
+    featured: false
+  },
+  {
+    id: "contract-review",
+    title: "Contract Clause Explainer",
+    category: "analysis",
+    description: "Get plain-English explanations of legal contract clauses and terms.",
+    prompt: "Explain the following contract clause in plain English:\n\n```\n[paste the clause here]\n```\n\nPlease:\n1. **Simple translation**: what this clause means in plain English\n2. **Key obligations**: what each party must do\n3. **Risks**: what to watch out for\n4. **Negotiation points**: what could be changed\n5. **Red flags**: language that should raise concern\n6. **Industry standard**: is this clause typical or unusual?\n\nNote: I understand this is not legal advice. I will consult a lawyer for final review.",
+    tags: ["legal", "contract", "analysis"],
+    featured: false
+  },
+  {
+    id: "meal-planner",
+    title: "Weekly Meal Planner",
+    category: "roleplay",
+    description: "Generate personalized weekly meal plans based on dietary preferences and goals.",
+    prompt: "Create a [number]-day meal plan for someone who:\n- Dietary preference: [omnivore/vegetarian/vegan/keto/etc.]\n- Calories target: [calories] per day\n- Allergies: [list any]\n- Cooking skill: [beginner/intermediate/advanced]\n- Time per meal: [minutes]\n- Budget: [low/medium/high]\n\nFor each day, provide:\n- Breakfast\n- Lunch\n- Dinner\n- 1 snack\n\nAlso include:\n- A grocery shopping list organized by category\n- 3 recipes that are quick and easy\n- Prep-ahead tips to save time during the week",
+    tags: ["meal planning", "nutrition", "cooking"],
+    featured: false
+  },
+  {
+    id: "travel-planner",
+    title: "Travel Itinerary Planner",
+    category: "learning",
+    description: "Plan detailed travel itineraries with activities, restaurants, and logistics.",
+    prompt: "Plan a [number]-day trip to [destination].\n\nTravel details:\n- Travelers: [solo/couple/family with kids age X/friends]\n- Interests: [culture/food/nature/shopping/adventure/relaxation]\n- Budget: [budget/mid-range/luxury]\n- Arrival: [date and time]\n- Departure: [date and time]\n- Accommodation: [already booked? area?]\n\nFor each day, provide:\n- Morning activity\n- Lunch recommendation\n- Afternoon activity\n- Dinner recommendation\n- Evening option\n\nAlso include:\n- Transportation tips between locations\n- Estimated costs for activities\n- Weather considerations\n- Booking recommendations (what to reserve in advance)\n- Backup plans for bad weather",
+    tags: ["travel", "vacation", "itinerary"],
+    featured: false
+  },
+  {
+    id: "book-summary",
+    title: "Book Summarizer",
+    category: "analysis",
+    description: "Get concise summaries of non-fiction books with key takeaways and action items.",
+    prompt: "Summarize the book \"[book title]\" by [author].\n\nProvide:\n1. **One-paragraph overview**: what's the book about?\n2. **Core thesis**: the main argument or premise\n3. **Key frameworks/concepts**: 3-5 big ideas from the book\n4. **Memorable examples/stories**: 2-3 illustrative anecdotes\n5. **Actionable takeaways**: 5 things I can implement today\n6. **Who should read this**: is this book right for me?\n7. **Related books**: what to read next\n\nFormat: concise, scannable bullet points. Skip fluff and filler. Focus on what's practically useful.",
+    tags: ["books", "reading", "self-improvement"],
+    featured: false
+  },
+  {
+    id: "grant-proposal",
+    title: "Grant & Funding Proposal Writer",
+    category: "business",
+    description: "Write compelling grant proposals and funding applications.",
+    prompt: "Write a grant proposal for [project/organization name].\n\nProject description: [brief description]\nFunding amount requested: [$ amount]\nFunding organization: [grantor name]\nProblem being solved: [describe the problem]\nTarget beneficiaries: [who benefits]\n\nInclude:\n1. **Executive summary**: 2-3 sentences\n2. **Problem statement**: why this matters now\n3. **Project description**: what you'll do\n4. **Methodology**: how you'll do it\n5. **Measurable outcomes**: how you'll measure success\n6. **Budget overview**: where the money goes\n7. **Organization background**: why you're qualified\n\nTone: professional, confident, mission-driven.",
+    tags: ["funding", "nonprofit", "writing"],
+    featured: false
+  },
+  {
+    id: "video-script",
+    title: "Video Script Writer",
+    category: "creative",
+    description: "Write engaging video scripts for YouTube, TikTok, or social media content.",
+    prompt: "Write a [duration] video script about [topic] for [platform - YouTube/TikTok/Instagram Reels]. Target audience: [audience].\n\nScript structure:\n\n**Hook** (first 3-5 seconds): grab attention\n**Intro** (10-15%): what this video is about\n**Main content** (60-70%): 3-5 key points with examples\n**CTA** (10-15%): like/subscribe/comment/click link\n**Outro** (5%): summary and tease next video\n\nFor each section, provide:\n- Visual/on-screen action\n- Narration/text\n- Timing\n\nTone: [educational/entertaining/inspirational/casual].\nInclude timestamp markers for editing.",
+    tags: ["video", "YouTube", "content creation"],
+    featured: false
+  },
+  {
+    id: "pitch-deck",
+    title: "Pitch Deck Outline",
+    category: "business",
+    description: "Structure a compelling investor pitch deck for your startup or business idea.",
+    prompt: "Create a pitch deck outline for [company/product name].\n\nBusiness: [one-line description]\nProblem: [what problem you solve]\nSolution: [your solution]\nTarget market: [market size and segment]\nBusiness model: [how you make money]\nCompetition: [key competitors]\n\nOutline 10 slides:\n1. **Title slide**: company name, tagline, presenter info\n2. **Problem**: the pain point (with story/example)\n3. **Solution**: your product/service (with demo/screenshot)\n4. **Market size**: TAM/SAM/SOM\n5. **Why now**: timing and market trends\n6. **Business model**: pricing, unit economics\n7. **Traction**: users, revenue, growth metrics\n8. **Team**: founder backgrounds and why you're the right team\n9. **Competition**: competitive advantage / moat\n10. **Ask**: how much, what for, milestones\n\nFor each slide: key message, data points, visual suggestions.",
+    tags: ["startup", "fundraising", "investor"],
+    featured: false
   }
 ];
 
