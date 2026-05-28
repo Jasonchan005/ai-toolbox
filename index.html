@@ -25,6 +25,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-503ZSLGF0W');
+
+    function trackEvent(action, params) {
+      if (typeof gtag === 'function') gtag('event', action, params || {});
+    }
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -289,9 +293,10 @@
       container.innerHTML = html;
     }
 
-    function filterCategory(cat) {
-      activeCategory = cat;
-      document.querySelectorAll('.category-chip').forEach(el => {
+      function filterCategory(cat) {
+        activeCategory = cat;
+        trackEvent('filter_category', { category: cat });
+        document.querySelectorAll('.category-chip').forEach(el => {
         el.classList.remove('active', 'bg-gray-900', 'text-white');
         if (el.dataset.cat === cat) {
           el.classList.add('active', 'bg-gray-900', 'text-white');
@@ -391,7 +396,8 @@
       renderTools();
       lucide.createIcons();
 
-      document.getElementById('searchInput').addEventListener('input', () => {
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        trackEvent('search', { search_term: e.target.value.substring(0, 50) });
         renderTools();
       });
     });

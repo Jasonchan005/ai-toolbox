@@ -24,6 +24,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-503ZSLGF0W');
+
+    function trackEvent(action, params) {
+      if (typeof gtag === 'function') gtag('event', action, params || {});
+    }
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
